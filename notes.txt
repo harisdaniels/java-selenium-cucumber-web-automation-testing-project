@@ -1,0 +1,67 @@
+By listItemAdministrators = By.xpath("//*[@id='SelectedCustomerRoleIds_listbox']/li[1]");
+By listItemForumModerators = By.xpath("///*[@id='SelectedCustomerRoleIds_listbox']/li[2]");
+By listItemGuests = By.xpath("//*[@id='23d9c68e-d608-4b83-97bc-74ee21898a0a']");
+By listItemGuests = By.xpath("//li[contains(text(), 'Guests')]");
+By listItemRegistered = By.xpath("//*[@id='SelectedCustomerRoleIds_listbox']/li[4]");
+By listItemVendors = By.xpath("//*[@id='SelectedCustomerRoleIds_listbox']/li[5]");
+
+By listItemAdministrators = By.xpath("//li[contains(text(), 'Administrators')]");
+By listItemForumModerators = By.xpath("//li[contains(text(), 'Forum Moderators')]");
+By listItemGuests = By.xpath("//li[contains(text(), 'Guests')]");
+By listItemRegistered = By.xpath("//li[contains(text(), 'Registered')]");
+By listItemVendors = By.xpath("//li[contains(text(), 'Vendors')]");
+
+
+public void chooseCustomerRoles(String role) {
+		
+		driver.findElement(By.xpath("//*[@id=\"SelectedCustomerRoleIds_taglist\"]/li/span[2]")).click();
+		
+		/*
+		if (!role.equals("Vendors")) { //If role is vendors should not delete Register as per req.
+			driver.findElement(By.xpath("//*[@id=\"SelectedCustomerRoleIds_taglist\"]/li/span[2]")).click();
+		}
+		*/
+		
+		
+		driver.findElement(customerRoles).click();
+		
+		WebElement listOfRoles;
+		
+		try {
+			Thread.sleep(3000);
+			if (role.equals("Administrators")) {
+				listOfRoles = driver.findElement(listItemAdministrators);
+			} else if (role.equals("Forum Moderators")) {
+				listOfRoles = driver.findElement(listItemForumModerators);
+			} else if (role.equals("Guests")) {
+				listOfRoles = driver.findElement(listItemGuests);
+			} else if (role.equals("Registered")) {
+				listOfRoles = driver.findElement(listItemRegistered);
+			} else if (role.equals("Vendors")) {
+				listOfRoles = driver.findElement(listItemVendors);
+			} else {
+				listOfRoles = driver.findElement(listItemGuests);
+			}
+			
+			listOfRoles.click();
+			//Thread.sleep(3000);
+			
+			//JavascriptExecutor js = (JavascriptExecutor)driver;
+			//js.executeScript("arguments[0].click();", listOfRoles);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	/*
+	By tableSearchResult = By.xpath("//table[@role='grid']");
+	By table = By.xpath("//table[@id='customers-grid']");
+	By tableRows = By.xpath("//*[@id=\"customers-grid\"]/tbody/tr");
+	// //table[@id='customers-grid']//tbody/tr
+	By tableCols = By.xpath("//*[@id=\"customers-grid\"]/tbody/tr/td");
+	//  //table[@id='customers-grid']//tbody/tr/td
+	*/
