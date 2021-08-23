@@ -1,4 +1,4 @@
-# This Is My Self-Mini Project of API Testing Using REST-Assured
+# This Is My Self-Mini Project of Web Automation Testing Using Java, Selenium, and Cucumber
 
 ## Project Information
 For this project, i use: 
@@ -128,18 +128,21 @@ To illustrate how this works, look at the following Gherkin Scenario step defini
 ## Run Test
 
 In Eclipse IDE, run your test and generating Cucumber Report at once, you can hover your cursor to `TestRunner.java` file, then right-click, click `Run As 1 JUnit Test`.
+![Screenshot_1](https://user-images.githubusercontent.com/74105380/130410878-c7007df7-9543-42d9-b193-f44601234426.jpg)
+
+### The Test will run
+![Screenshot_3](https://user-images.githubusercontent.com/74105380/130412424-3a484e97-c050-41f0-93d4-fc0deed31acd.jpg)
 
 
 
+## Test Report by Cucumber Report
 
-## Test Report by TestNG
-After run the test, you can also see the result of the test by double-clicking the `index.html` file that stored inside the `test-output` folder.
-![Screenshot_10](https://user-images.githubusercontent.com/74105380/128624249-f9a2b853-2ecf-4f66-9720-096b6d54c1b5.jpg)
-> If `test-output` folder does not appear, right-click on the project and click `refresh`.
+After run the test, you can also see the result of the test by copy-paste the link in the console.
+![Screenshot_4](https://user-images.githubusercontent.com/74105380/130412739-203ce828-40df-4827-b19b-78ee515f26cc.jpg)
 
 
 ### Test Report Sample
-![Screenshot_4](https://user-images.githubusercontent.com/74105380/129662415-13b182b6-a54f-472c-9f95-b7e253cfc8cf.jpg)
+![Screenshot_7](https://user-images.githubusercontent.com/74105380/130414584-7ef56858-697c-4537-966a-77c924eaaefc.jpg)
 The result will be like this.
 
 
